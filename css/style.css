@@ -1,0 +1,128 @@
+/*null*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside, section {
+  display: block;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html, body {
+  color: #000;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*--------------------*/
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.counter-container {
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgb(193, 190, 158);
+  font-size: 30px;
+}
+.counter-container .counter {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+}
+.counter-container .show-counter {
+  flex: 0 0 100px;
+}
+.counter-container .button-block {
+  flex: 1 1 auto;
+}
+.counter-container .button-block div {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.palette-block {
+  background-color: rgb(171, 188, 166);
+  padding: 20px;
+  width: 100%;
+}
+.palette-block button {
+  padding: 5px 20px;
+  margin-top: 20px;
+}
+.palette-block span {
+  margin: 10px;
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+}
+
+.colorful-text-block {
+  width: 500px;
+  padding: 20px;
+  background-color: rgb(90, 119, 139);
+  font-size: 20px;
+}
+.colorful-text-block span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}/*# sourceMappingURL=style.css.map */

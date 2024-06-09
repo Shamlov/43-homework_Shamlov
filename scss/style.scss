@@ -1,0 +1,73 @@
+@import "null.scss";
+
+@mixin flexible () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+@mixin absolute-centering() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+.counter-container {
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgb(193, 190, 158);
+  font-size: 30px;
+  .counter {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+  }
+  .show-counter {
+    flex: 0 0 100px;
+  }
+  .button-block {
+    flex: 1 1 auto;
+    div{
+      border: 2px solid black;
+      cursor: pointer;
+    }
+  }
+}
+
+.palette-block {
+  background-color: rgb(171, 188, 166);
+  padding: 20px;
+  width: 100%;
+  button {
+    padding: 5px 20px;
+    margin-top: 20px;
+  }
+  span {
+    margin: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+  }
+}
+
+
+.colorful-text-block {
+  width: 500px;
+  padding: 20px;
+  background-color: rgb(90, 119, 139);
+  font-size: 20px;
+  span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+  }
+}
