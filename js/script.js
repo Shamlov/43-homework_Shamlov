@@ -71,8 +71,60 @@ paletteColor.forEach(function(el) {
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
+/*Создать html-страницу со статьей, комментариями к ней и 
+формой для добавления нового комментария. 
+При нажатии на кнопку Добавить комментарий форма должна 
+очищаться, а комментарий добавляться к списку всех коммента-
+риев. Комментарий состоит из имени пользователя, даты и текста. */
+
+const commentBlock = document.getElementById('commentBlock')
+const userName = document.getElementById('userName')
+const userText = document.getElementById('userText')
+const userCommentsBlock = document.getElementById('userCommentsBlock')
+const inputBlock  = document.getElementById('inputBlock')
+
+function btnAddComment(e) {                               // ловим клик по кнопке
+    if(!e.target.closest('#btnAddComment')) {
+        return
+    }
+    addComment()
+}
+
+commentBlock.addEventListener('click' , btnAddComment)
+
+function addComment() {
+    let userNameinfo = userName.value
+    let userTextinfo = userText.value
+    let time = `${new Date().getHours()} часов   ${new Date().getMinutes()} минут  ${new Date().getSeconds()} секунд`
+    
+    if(userNameinfo =='' || userTextinfo == '') {
+        alert('введите текст')
+        return
+    }
+
+    let uName = document.createElement('div')      
+    uName.className = 'user-comments-block'
+    userCommentsBlock.after(uName)
+
+    userCommentsBlock.nextElementSibling.insertAdjacentHTML ('beforeEnd' ,  // сосед справа в него втавим готовый html
+        `<p class="name">${userNameinfo}</p>
+        <p class="date">${time}</p>
+        <p class="text">${userTextinfo}</p> `
+    )      
+    // userNameinfo = '' //  !!!!!!!!!!!!!почему при при такой записи форма не очищается ?????
+    userName.value = ''
+    userText.value = ''
+}
 
 
+///////////////////////////////////////////////////////////////////////////////////////
 
+// !!!! даже не представляю как делать следующее задание
 
-
+/*Создать html-страницу с текстовым полем для ввода страны. 
+При вводе пользователем страны, под текстовым полем должен 
+появляться выпадающий список с подсказками (максимум 10 штук). 
+Подсказки зависят от того, что ввел пользователь. Данные 
+для подсказок храните в массиве, которые заранее создайте и 
+заполните странами. При щелчке на подсказку ее текст должен 
+вводится в input.*/

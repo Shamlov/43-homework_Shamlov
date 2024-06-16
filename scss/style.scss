@@ -1,4 +1,4 @@
-@import "null.scss";
+// @import "null.scss";
 
 @mixin flexible () {
   display: flex;
@@ -59,6 +59,8 @@
 }
 
 
+
+
 .colorful-text-block {
   width: 500px;
   padding: 20px;
@@ -71,3 +73,35 @@
     border: 1px solid black;
   }
 }
+
+
+
+
+.comment-block {
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(225, 227, 169);
+  font-size: 18px;
+  padding: 20px;
+  .article {
+    border-bottom: 2px solid black;
+  }
+  .user-name {
+    display: block;
+    margin-bottom: 10px;
+  }
+  textarea {
+    display: block;
+    height: 50px;
+    width: 400px;
+    margin-bottom: 10px;
+  }
+  .btn-addComment {
+    width: 100px;
+    height: 30px;
+  }
+  .user-comments-block {
+    border-bottom: 2px solid black;
+  }
+}
+
